@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from flask import Flask, render_template, request
 from werkzeug.middleware.proxy_fix import ProxyFix
 
+
 load_dotenv()
 
 import boto3
@@ -213,5 +214,5 @@ def json_dump_filter(data):
     return json.dumps(data)
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(host="0.0.0.0", port=8000, debug=True)
